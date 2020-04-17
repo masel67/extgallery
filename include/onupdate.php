@@ -15,7 +15,7 @@
  * @package
  * @author       XOOPS Development Team
  */
-
+use XoopsModules\Extgallery;
 if ((!defined('XOOPS_ROOT_PATH')) || !($GLOBALS['xoopsUser'] instanceof \XoopsUser)
     || !$GLOBALS['xoopsUser']->IsAdmin()) {
     exit('Restricted access' . PHP_EOL);
@@ -44,8 +44,8 @@ function xoops_module_pre_update_extgallery(\XoopsModule $module)
 {
     /** @var Extgallery\Helper $helper */
     /** @var Extgallery\Utility $utility */
-    $moduleDirName = basename(dirname(__DIR__));
-    $helper       = Extgallery\Helper::getInstance();
+   // $moduleDirName = basename(dirname(__DIR__));
+   // $helper       = Extgallery\Helper::getInstance();
     $utility      = new Extgallery\Utility();
 
     $xoopsSuccess = $utility::checkVerXoops($module);
@@ -62,7 +62,7 @@ function xoops_module_pre_update_extgallery(\XoopsModule $module)
  * @return bool true if update successful, false if not
  */
 
-use XoopsModules\Extgallery;
+//use XoopsModules\Extgallery;
 
 /**
  * @param \XoopsModule $module
