@@ -1,4 +1,6 @@
-<?php namespace XoopsModules\Extgallery;
+<?php 
+
+namespace XoopsModules\Extgallery;
 
 /*
  * You may not change or alter any portion of this comment or credits
@@ -33,7 +35,7 @@ class Helper extends \Xmf\Module\Helper
      * 
      * @param bool $debug
      */
-    protected function __construct($debug = false)
+    public function __construct($debug = false)
     {
         $this->debug   = $debug;
         $moduleDirName = basename(dirname(__DIR__));
